@@ -2,7 +2,7 @@
 pragma solidity 0.8.27;
 
 import {Script, console} from "lib/forge-std/src/Script.sol";
-import {UREToken} from "../src/UREToken.sol";
+import {OWNIT0Token} from "../src/OWNIT0Token.sol";
 import {Upgrades} from "@openzeppelin-foundry-upgrades/Upgrades.sol";
 
 /**
@@ -10,9 +10,9 @@ import {Upgrades} from "@openzeppelin-foundry-upgrades/Upgrades.sol";
  * @dev Upgradable ERC 20 contract.
  */
 contract DeployToken is Script {
-    UREToken public token;
+    OWNIT0Token public token;
 
-    function run() public returns (UREToken) {
+    function run() public returns (OWNIT0Token) {
         vm.startBroadcast();
 
         string memory tokenName = vm.envString("TOKEN_NAME");
@@ -21,12 +21,12 @@ contract DeployToken is Script {
 
         console.log("Deploy transparent proxy");
         address proxyAddress = Upgrades.deployTransparentProxy(
-            "UREToken.sol", msg.sender, abi.encodeCall(UREToken.initialize, (tokenName, tokenSymbol, tokenDecimals))
+            "OWNIT0Token.sol", msg.sender, abi.encodeCall(OWNIT0Token.initialize, (tokenName, tokenSymbol, tokenDecimals))
         );
 
-        token = UREToken(proxyAddress);
+        token = OWNIT0Token(proxyAddress);
 
-        console.log("UREToken deployed at:", proxyAddress);
+        console.log("OWNIT0Token deployed at:", proxyAddress);
         address implementationAddress = Upgrades.getImplementationAddress(proxyAddress);
         console.log("Implementation address:", implementationAddress);
 

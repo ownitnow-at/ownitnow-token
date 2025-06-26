@@ -1,6 +1,17 @@
-# Universal Real Estate Token
+# Ownitnow Zero (OWNIT0) Token
 
-UREToken is an upgradable ERC-20 token built with OpenZeppelin libraries. It includes features such as role-based minting&burning, pausing, and user blocklisting. This token is suitable for applications requiring fine-grained control over token transferability and governance.
+Ownitnow Zero (OWNIT0) Token is an upgradable ERC-20 token.
+
+## Token Properties
+
+| Property                  | Value                                                                   |
+| ------------------------- | ----------------------------------------------------------------------- |
+| Name                      | Ownitnow Zero                                                           |
+| Symbol                    | OWNIT0                                                                  |
+| Number of Decimals        | 0                                                                       |
+| Token Address             | 0xD6bFc71F8049C8D1B0f2e8C7e8B57DDa2aE15eeF                              |
+| Link to Block Explorer    | <https://snowtrace.io/token/0xD6bFc71F8049C8D1B0f2e8C7e8B57DDa2aE15eeF> |
+| Blockchain                | Avalanche                                                               |
 
 ## ✨ Features
 
@@ -21,13 +32,13 @@ Note: The deployer wallet automatically gets admin role and can upgrade the cont
 | Parameter       | Description                         |
 |-----------------|-------------------------------------|
 | `tokenName`     | The name of the token               |
-| `tokenSymbol`   | The symbol (e.g., `URE`)            |
+| `tokenSymbol`   | The symbol (e.g., `OWNIT0`)         |
 | `tokenDecimals` | Number of decimal places (e.g., 18) |
 
 ### Example
 
 ```solidity
-UREToken.initialize("URE Token", "URE", 8);
+OWNIT0Token.initialize("Ownitnow Zero", "OWNIT0", 0);
 ```
 
 ### Foundry Deployment

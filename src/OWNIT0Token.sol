@@ -12,7 +12,7 @@ import {ERC20PermitUpgradeable} from
 import {ERC20BlocklistUpgradeable} from "./ERC20BlocklistUpgradeable.sol";
 import {Initializable} from "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-contract UREToken is
+contract OWNIT0Token is
     Initializable,
     ERC20Upgradeable,
     ERC20BurnableUpgradeable,

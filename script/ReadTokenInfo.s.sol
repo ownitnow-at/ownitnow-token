@@ -2,7 +2,7 @@
 pragma solidity 0.8.27;
 
 import {Script, console} from "lib/forge-std/src/Script.sol";
-import {UREToken} from "../src/UREToken.sol";
+import {OWNIT0Token} from "../src/OWNIT0Token.sol";
 import {Upgrades} from "@openzeppelin-foundry-upgrades/Upgrades.sol";
 
 /**
@@ -10,10 +10,10 @@ import {Upgrades} from "@openzeppelin-foundry-upgrades/Upgrades.sol";
  * @dev Upgradable ERC 20 contract.
  */
 contract ReadTokenInfo is Script {
-    function run(address tokenAddress) public returns (UREToken) {
+    function run(address tokenAddress) public returns (OWNIT0Token) {
         vm.startBroadcast();
 
-        UREToken token = UREToken(tokenAddress);
+        OWNIT0Token token = OWNIT0Token(tokenAddress);
 
         uint8 decimals = token.decimals();
         string memory name = token.name();

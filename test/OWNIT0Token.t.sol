@@ -6,11 +6,11 @@ import {IAccessControl} from "@openzeppelin/contracts/access/IAccessControl.sol"
 import {PausableUpgradeable} from
     "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20PausableUpgradeable.sol";
 import {ERC20BlocklistUpgradeable} from "../src/ERC20BlocklistUpgradeable.sol";
-import {UREToken} from "../src/UREToken.sol";
+import {OWNIT0Token} from "../src/OWNIT0Token.sol";
 import {DeployToken} from "../script/DeployToken.s.sol";
 
-contract URETokenTest is Test {
-    UREToken private token;
+contract OWNIT0TokenTest is Test {
+    OWNIT0Token private token;
 
     address admin = address(0x1);
     address pauser = address(0x2);

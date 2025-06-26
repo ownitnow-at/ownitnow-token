@@ -4818,9 +4818,9 @@ abstract contract ERC20PermitUpgradeable is Initializable, ERC20Upgradeable, IER
     }
 }
 
-// src/UREToken.sol
+// src/OWNIT0Token.sol
 
-contract UREToken is
+contract OWNIT0Token is
     Initializable,
     ERC20Upgradeable,
     ERC20BurnableUpgradeable,
