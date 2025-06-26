@@ -21,7 +21,9 @@ contract DeployToken is Script {
 
         console.log("Deploy transparent proxy");
         address proxyAddress = Upgrades.deployTransparentProxy(
-            "OWNIT0Token.sol", msg.sender, abi.encodeCall(OWNIT0Token.initialize, (tokenName, tokenSymbol, tokenDecimals))
+            "OWNIT0Token.sol",
+            msg.sender,
+            abi.encodeCall(OWNIT0Token.initialize, (tokenName, tokenSymbol, tokenDecimals))
         );
 
         token = OWNIT0Token(proxyAddress);
